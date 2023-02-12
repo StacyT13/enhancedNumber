@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky 7</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        "use strict"
+
+        var total = 0;
+        let entry = 0;
+       
+        //get entry
+        do {
+            entry = (parseInt(prompt("Enter a whole number:"))); }
+        while ( isNaN(parseInt(entry))); {
+
+        var userentry = entry;
+        total = total + userentry; //get user entry and assign to variable
+
+        var A = parseInt(total+9); //entry + 9
+
+        var B = parseInt(A*2); //multiply by 2
+
+        var C = parseInt(B-4); //subtract 4
+
+        var D = parseInt(C/2); //divide by 2
+
+        var final = parseInt(D-userentry); //calculate new number - oringinal number
+        
+    }
+        
+   //  if ( !isNaN(parseInt(entry)));
+   // alert("A number must be given.");
+          
+</script>
+</head>
+
+<body>
+
+    <h1>Amazing Lucky 7</h1>
+
+<script>
+
+        //display results
+       document.write("I added 9 to " + userentry + ". The new number is " + A + ". <br>"); 
+       document.write("I multiplied " + A + " by 2. The new number is " + B + ". <br>" );
+       document.write("I subtracted 4 from " + B + ". The new number is " + C + ". <br>"); 
+       document.write("I divided " + C + " by 2. The new number is " + D + ". <br>");
+       document.write( "I subtracted your original number of " + userentry + " from " + D + ".<br>"
+       + "<b>Your final number is " + final + "!</b>");
+       document.write("<h1>Thanks for playing! <a href>Play Again?</a></h1>");
+
+    
+</script>
+</body>
+</html>
